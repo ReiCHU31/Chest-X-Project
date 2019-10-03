@@ -95,6 +95,7 @@ model.compile(optimizer=tf.keras.optimizers.Adam(lr=base_learning_rate),
 
 The app contains 2 pages: 
 - **Homepage** including project introduction and section to upload chest X-ray image 
+
 ![](https://i.imgur.com/2c3JAUK.png)
 
 ![](https://i.imgur.com/RTK0PXQ.jpg)
@@ -106,6 +107,7 @@ The app contains 2 pages:
 ![](https://i.imgur.com/RrCnBS6.png)
 
 - **Result page** for users to received results
+
 ![](https://i.imgur.com/QhnMp2J.png)
 
 ## CONCLUSION
