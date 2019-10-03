@@ -1,21 +1,17 @@
 # The Chest X project
 ### by Phuong T.M. Chu
 
+This is the project that we finished after 12th week of studying **Machine Learning** from scratch.
+
 <p align="center">
 <img width="880" height="450" src="https://s3.amazonaws.com/dsg.files.app.content.prod/gereports/wp-content/uploads/2017/05/01182345/lungs.gif">
 </p>
 
 ## INTRODUCTION
-### 1. User stories
+### 1. Motivation
 Chest radiography is the most common imaging examination globally, critical for screening, diagnosis, and management of many life threatening diseases. 
 
-This app 
-
-- aims to provide **automated chest radiograph interpretation** at the **level of practicing radiologists** 
-
-- could provide substantial benefit in many medical settings, from 
-    - **improved workflow prioritization** and **clinical decision** 
-    - support to **large-scale screening** and **global population health initiatives**.
+Our vision aims to provide automated chest radiology analysis **comparable to professional practicing radiologists**. In addition, we hope to assist various medical settings such as **improved workflow prioritization** and **clinical decision support**. We have faith that our application will **advance global population health initiatives** through large-scale screening.
 
 ### 2. Plan
 Main steps:
@@ -24,18 +20,13 @@ Main steps:
 |:-----------------------------|:------------:|:------------:|
 |Data collection |1 days|x|
 |Data preprocessing |1 days|x|
-|Building Model|10 days|x|
+|Building Model|5 days|x|
 |Build Flask App|1 day|x|
-|**Total**|**13 days**||
+|**Total**|**8 days**||
 
 ## MATERIALS AND METHODS
 ### 1. Datasets
-For progress in both development and validation of automated algorithms, we realized there was a need for a labeled dataset that 
-- (1) was large, 
-- (2) had strong reference standards, and 
-- (3) provided expert human performance metrics for comparison.
-
-[**CheXpert**](https://stanfordmlgroup.github.io/competitions/chexpert/)
+Our [**CheXpert**](https://stanfordmlgroup.github.io/competitions/chexpert/) dataset is provided by Stanford Machine Learning group. The dataset:
 - contains 224,316 chest radiographs of 65,240 patients
 - is a large dataset of chest X-rays and competition for automated chest x-ray interpretation, 
 - which features uncertainty labels and radiologist-labeled reference standard evaluation sets.
@@ -89,7 +80,9 @@ model.compile(optimizer=tf.keras.optimizers.Adam(lr=base_learning_rate),
               metrics=["accuracy"])
 ```
 
-### 4. Model summary
+### 4. Model performance summary
+
+Our model has the AUC of **88.57 %** for the train dataset and **88.17 %** for the validation dataset. 
 
 ### 5. UI
 
@@ -110,5 +103,50 @@ The app contains 2 pages:
 
 ![](https://i.imgur.com/lnzIR4y.png)
 
+### 6. SETUP ENVIRONMENT
+* In order to run our model on a Flask application locally, you need to clone this repository and create the deep learning model `model.h5` followed the instruction inside the Jupyter notebook, then you save the file inside the folder `model`. After that, yout need to set up the environment by these following commands:
+
+```shell
+python3 -m pip install --user pipx
+python3 -m pipx ensurepath
+
+pipx install pipenv
+
+# Install dependencies
+pipenv install --dev
+
+# Setup pre-commit and pre-push hooks
+pipenv run pre-commit install -t pre-commit
+pipenv run pre-commit install -t pre-push
+```
+* On the Terminal, use these commands:
+```
+# enter the environment
+pipevn shell
+pipenv graph
+set FLASK_APP=app.py
+set FLASK_ENV=development
+export FLASK_DEBUG=1
+flask run
+```
+* If you have error `ModuleNotFoundError: No module named 'tensorflow'` then use
+```
+pipenv install tensorflow==2.0.0beta-1
+```
+* If  `* Debug mode: off` then use
+```
+export FLASK_DEBUG=1
+```
+
+* Run the model by 
+
+```shell
+pipenv run flask run
+```
+
+* If you want to exit `pipenv shell`, use `exit`
+
 ## CONCLUSION
 
+We successfully **built a deep neural network model** by implementing **Convolutional Neural Network (CNN)** to automatically interprete X-ray image high AUC **88.17 %**.
+In addition, we also **built a Flask application** so user can upload their X-ray images and interpret the results.
