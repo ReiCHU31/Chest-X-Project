@@ -2,7 +2,7 @@
 ### by Phuong T.M. Chu
 
 <p align="center">
-<img width="660" height="500" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Projectional_rendering_of_CT_scan_of_thorax_%28thumbnail%29.gif/358px-Projectional_rendering_of_CT_scan_of_thorax_%28thumbnail%29.gif">
+<img width="880" height="450" src="https://s3.amazonaws.com/dsg.files.app.content.prod/gereports/wp-content/uploads/2017/05/01182345/lungs.gif">
 </p>
 
 ## INTRODUCTION
@@ -108,7 +108,7 @@ The app contains 2 pages:
 
 - **Result page** for users to received results
 
-![](https://i.imgur.com/QhnMp2J.png)
+![](https://i.imgur.com/lnzIR4y.png)
 
 ## CONCLUSION
 
