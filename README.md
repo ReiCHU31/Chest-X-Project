@@ -43,8 +43,6 @@ Each report was labeled for the presence of 14 observations as positive, negativ
 * **Google Cloud Platform** to deploy the app and SQL data storage.
 
 ### 3. Building Models
-* Building **CNN model**
-
 - The training labels in the dataset for each observation are either **0** (negative), **1** (positive), or **U** (uncertain). Explore different approaches to using the uncertainty labels during the model training.
 
     * **U-Ignore**: ignore the uncertain labels during training.
@@ -59,6 +57,8 @@ In case of **multi-label image classification**, we can have more than one label
 <img width="660" height="600" src="https://stanfordmlgroup.github.io/competitions/chexpert/img/figure1.png">
 </p>
 
+* Building **CNN model**
+The architecture is built by Tensorflow and Transfer Learning techniques.
 ```python
 densenet = tf.keras.applications.densenet.DenseNet121(weights='imagenet',input_shape=(224,224,3),include_top=False)
 densenet.trainable=False
