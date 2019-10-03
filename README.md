@@ -58,6 +58,7 @@ In case of **multi-label image classification**, we can have more than one label
 </p>
 
 * Building **CNN model**
+
 The architecture is built by Tensorflow and Transfer Learning techniques.
 ```python
 densenet = tf.keras.applications.densenet.DenseNet121(weights='imagenet',input_shape=(224,224,3),include_top=False)
