@@ -149,7 +149,7 @@ pipenv run flask run
 * If you want to exit `pipenv shell`, use `exit`
 ## Bonus part
 
-We successfully use the techniques **GradCAM** to visualize the important regions of images associated with specific label. You can find more detail in the notebook `GradCAMX-ray.ipynb`.
+We successfully use the techniques **Gradient-weighted Class Activation Mapping - GradCAM** to visualize the important regions of images associated with specific label. You can find more detail in the notebook `GradCAMX-ray.ipynb`.
 For example, in this image, the heatmap represent region with "Pleural Effusion" label.
 
 ![](https://i.imgur.com/gkOujZl.png)
