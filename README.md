@@ -39,8 +39,8 @@ Each report was labeled for the presence of 14 observations as positive, negativ
 </p>
 
 ### 2. Methods
-* **Python** and some neccessary libraries such **pandas, numpy, keras, tensorflow, flask**.
-* **Google Cloud Platform** to deploy the app and SQL data storage.
+* **Python** and some neccessary libraries such **Tensorflow, keras, pandas, numpy, keras, tensorflow, flask**.
+* **Google Cloud Platform** to tr
 
 ### 3. Building Models
 - The training labels in the dataset for each observation are either **0** (negative), **1** (positive), or **U** (uncertain). Explore different approaches to using the uncertainty labels during the model training.
@@ -146,6 +146,12 @@ pipenv run flask run
 ```
 
 * If you want to exit `pipenv shell`, use `exit`
+## Bonus part
+
+We successfully use the techniques **GradCAM** to visualize the important regions of images associated with specific label.
+For example, in this image, the heatmap represent region with "Pleural Effusion" label.
+
+![](https://i.imgur.com/gkOujZl.png)
 
 ## CONCLUSION
 
