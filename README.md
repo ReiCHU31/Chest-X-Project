@@ -59,7 +59,8 @@ In case of **multi-label image classification**, we can have more than one label
 
 * Building **CNN model**
 
-The architecture is built by Tensorflow and Transfer Learning techniques.
+The architecture is built by Tensorflow and Transfer Learning techniques. More details can be found in `Chest X model building.ipynb`.
+
 ```python
 densenet = tf.keras.applications.densenet.DenseNet121(weights='imagenet',input_shape=(224,224,3),include_top=False)
 densenet.trainable=False
@@ -148,7 +149,7 @@ pipenv run flask run
 * If you want to exit `pipenv shell`, use `exit`
 ## Bonus part
 
-We successfully use the techniques **GradCAM** to visualize the important regions of images associated with specific label.
+We successfully use the techniques **GradCAM** to visualize the important regions of images associated with specific label. You can find more detail in the notebook `GradCAMX-ray.ipynb`.
 For example, in this image, the heatmap represent region with "Pleural Effusion" label.
 
 ![](https://i.imgur.com/gkOujZl.png)
