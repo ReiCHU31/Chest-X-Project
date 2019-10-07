@@ -40,7 +40,7 @@ Each report was labeled for the presence of 14 observations as positive, negativ
 
 ### 2. Methods
 * **Python** and some neccessary libraries such **Tensorflow, keras, pandas, numpy, keras, tensorflow, flask**.
-* **Google Cloud Platform** to tr
+* **Google Cloud Platform** to train models.
 
 ### 3. Building Models
 - The training labels in the dataset for each observation are either **0** (negative), **1** (positive), or **U** (uncertain). Explore different approaches to using the uncertainty labels during the model training.
