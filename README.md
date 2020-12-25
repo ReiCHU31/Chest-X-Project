@@ -39,7 +39,7 @@ Each report was labeled for the presence of 14 observations as positive, negativ
 </p>
 
 ### 2. Methods
-* **Python** and some neccessary libraries such **Tensorflow, keras, pandas, numpy, keras, tensorflow, flask**.
+* **Python** and some neccessary libraries such **Tensorflow, keras, pandas, numpy, flask**.
 * **Google Cloud Platform** to train models.
 
 ### 3. Building Models
